@@ -20,13 +20,14 @@
 		}	
 	</style>
 	<body class = "container">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../css/style.css">
 		<header>
 			<nav id = "mainNav">
 			<ul>
-					<li><a href="index.html">خانه</a></li>
+					<li><a href="../index.html">خانه</a></li>
 					<li><a href="contact.html">ارتباط با ما</a></li>
 					<li><a href="#">افزودن محصول</a></li>
+                    <li><a href="adduser.html">ثبت نام</a></li>
 				</ul>
 			</nav>
 			</header>
@@ -43,14 +44,10 @@
 					<input type = "number" name = "price" id = "price" class="form-control" min = "0" step = "1000" required>
 					<span class = "input-group-text">تومان</span>
 				</span><br>
+                <label for = "file">تصویر محصول</label>
+				<input type = "file" name = "productPicture" id = "file" class="form-control"><br>
 				<label for = "description">توضیحات </label>
 				<textarea name = "description" id = "description" class="form-control"></textarea><br>
-				
-				<label for = "file">تصویر محصول</label>
-				<input type = "file" name = "productPicture" id = "file" class="form-control"><br>
-				
-					<label for="email">نظرات</label>
-					<textarea name="message" id="message" rows="15" cols="155"></textarea>
 					<br><br>
 				<input type = "submit" name = "submit" value = "ارسال" class="btn btn-primary">
 			</form>

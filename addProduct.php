@@ -1,13 +1,13 @@
 <?php
-include ('settings.php');
-include ('functions.php') ;
+include ('../includes/settings.php');
+include ('../includes/functions.php') ;
 $alert = '';
 if( isset( $_POST['submit'] ) ){
 	
-$imgSrc = 'images/image.jpg';
+$imgSrc = '../images/image.jpg';
 
-	$sql = "INSERT INTO Products (name, price,picture, email, description) 
-	VALUES('{$_POST['name']}', {$_POST['price']}, '{$imgSrc}','{$_POST['email']}', '{$_POST['description']}')";
+	$sql = "INSERT INTO Products (name, price,picture,description) 
+	VALUES('{$_POST['name']}', {$_POST['price']},'{$_POST['description']}', '{$imgSrc}')";
 
 $db = new DB();
 
