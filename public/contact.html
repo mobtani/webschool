@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+             background:linear-gradient(
+			90deg,
+		  rgba(243, 241, 148, 0.897),
+		  rgba(178, 217, 248, 0.9)
+					);
+                }
+        form{
+            width: 400px;
+            margin: 40px auto;
+        }
+        label{
+            width: 100px;
+            direction: rtl;
+            float: right;
+        }
+        input{
+            width: 300px;
+            float: right; 
+        }
+        button{
+            float: right;
+            text-align: center;
+            width: 304px;
+            margin: 15px 0;
+            background-color: #98D0EE;
+        }
+        ::placeholder{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <form action = "contact.php" method = "POST">
+        <div>
+        <label for="name">نام کاربری</label>
+        <input type="text" id="user" name="user" placeholder="نام"/> 
+        </div>
+        <div>
+        <label for="email">ایمیل</label>
+        <input type="text" name="email" id="email" placeholder="ایمیل" />
+        </div>
+        <div>
+        <label for="title">عنوان</label>
+        <input type="text" name="title" id="title" placeholder="عنوان پیشنهاد" />
+        </div>
+        <div>
+        <label for="email">نظرات</label>
+        <textarea name="message" id="message" rows="15" cols="54"></textarea>
+        </div>
+        <div>
+        <button>ثبت</button>
+        </div>
+        </form>
+</body>
+</html>
