@@ -1,23 +1,18 @@
 <?php
-include ('../includes/settings.php');
-include ('../includes/functions.php') ;
+include ('../include/setting.php');
+include ('../include/functions.php') ;
 $alert = '';
 if( isset( $_POST['submit'] ) ){
-	
-$imgSrc = '../images/image.jpg';
+$imgSrc = 'assets/images/photo.jpg';
 
-	$sql = "INSERT INTO Products (name, price,picture,description) 
-	VALUES('{$_POST['name']}', {$_POST['price']},'{$_POST['description']}', '{$imgSrc}')";
+unset( $_POST['submit'] );
+$_POST['imgSrc'] = $imgSrc;
 
 $db = new DB();
-
-$result = $db -> execute( $sql );
+Products::add( $_POST );
 unset( $db );
-
-if( $result )	
-	$alert = alertTemplate('با موفقیت ثبت شد!', 'success');
-
-
+echo "با موفقیت ثبت شد";
+$alerts = alertTemplate('با موفقیت ثبت شد!', 'success');
 }
 ?>
 <!doctype html>

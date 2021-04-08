@@ -5,5 +5,5 @@ $sql = "INSERT INTO user(name,famil,email)
 $result = $dbc -> query( $sql ); // mysqli_query
 $dbc -> close(); //mysqli_close
 // C. success message
-echo 'پیام با موفقیت ثبت شد';
+echo 'ثبت نام شما انجام شد';
 ?>
